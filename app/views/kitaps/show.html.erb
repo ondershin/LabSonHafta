@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+<section class="blog-post-area section-margin">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+            <div class="main_blog_details">
+                
+<%= image_tag @kitap.resim.url(:medium) if @kitap.resim? %>
+                <a href="#"><h4> <%= @kitap.isim %></h4></a>
+                <div class="user_details">
+                  <div class="float-left">
+                 
+                    
+                  </div>
+                  <div class="float-right mt-sm-0 mt-3">
+                    <div class="media">
+                      <div class="media-body">
+                        <h5><%= @kitap.sayfa %></h5>
+                       
+                       
+                        <br/>
+                      </div>
+                     
+                    </div>
+                  </div>
+                  <p> <%= @kitap.ozet %><p/>
+                </div>
+                
+                <div id="like">
+                
+                <strong>Beğeni sayısı: <%= @kitap.like.sayi %></strong>
+               
+                </div>
+                 <button type="button" class="btn btn-light"><%= link_to " Beğen ", kitap_like_path(@kitap), remote: :true, method: :put %></button>
+                <button type="button" class="btn btn-light"><%= link_to 'Edit', edit_kitap_path(@kitap) %> </button>
+                <button type="button" class="btn btn-light"><%= link_to 'Back', kitaps_path %></button>
+               
