@@ -6,6 +6,7 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'paperclip'
 gem 'devise'
+gem "amaze_sns", "~> 1.3.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
